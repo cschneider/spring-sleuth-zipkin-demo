@@ -5,13 +5,16 @@ Shows how spring boot applications can be instrumented using spring sleuth to se
 ## Installation
 
 Run zipkin docker image with a REST receiver, in memory storage and the zipkin UI
+
     docker run -d -p 9411:9411 openzipkin/zipkin
     
 Run tracing demo application
+
     cd tracing
     mvn spring-boot:run
     
 Now use the browser to call the URI
+
     http://localhost:8080
 
 The browser should show "Hello Christian".
@@ -27,6 +30,7 @@ All the calls should be logged to zipkin and be available there as a trace.
 ## Check in zipkin
 
 Start the zipkin UI
+
     http://localhost:9411/
     
 Click find trace. If it shows no trace use a wider range in the dates.
