@@ -2,13 +2,16 @@
 
 Shows how spring boot applications can be instrumented using spring sleuth to send tracing information to zipkin.
 
-## Installation
+## Configure zipkin
 
-Run zipkin docker image with a REST receiver, in memory storage and the zipkin UI
+See (org.springframework.cloud.stream.binder.kafka.config.KafkaBinderConfigurationProperties).
+Set up the kafka server properties in the application.properties.
 
-    docker run -d -p 9411:9411 openzipkin/zipkin
-    
-Run tracing demo application
+## Run zipkin, kafka and zookeeper
+
+docker-compose up
+
+## Run tracing demo application
 
     cd tracing
     mvn spring-boot:run
